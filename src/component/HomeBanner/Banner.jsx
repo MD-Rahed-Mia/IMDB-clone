@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Style.scss";
 import useFetch from "../../utils/useFetch";
+import { useNavigate } from "react-router-dom";
 
 export default function Banner() {
   const { data, loading } = useFetch("trending/movie/day?language=en-US");
+  const navigate = useNavigate();
+
+
   const [bg, setBg] = useState(null);
 
   useEffect(() => {
@@ -16,6 +20,14 @@ export default function Banner() {
         data?.results[Math.floor(Math.random() * 20)].backdrop_path
     );
   }, [data, loading]);
+
+  function gotoSearch(event){
+    if(event.target == "Enter"){
+      navigate('/search');
+    }
+  }
+
+
   return (
     <div>
       <div
@@ -37,6 +49,7 @@ export default function Banner() {
             name="search"
             id="search"
             placeholder="search your favourite movie or shows....."
+            onKeyUp={gotoSearch}
           />
           <button>search</button>
         </div>
