@@ -1,0 +1,27 @@
+@import "../style/mixins.scss";
+
+.overview {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  h2{
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+.overview-content {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+@include md {
+  .overview {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .overview-content {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}

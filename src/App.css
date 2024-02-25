@@ -1,0 +1,25 @@
+
+@import "./style/mixins.scss";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #000;
+}
+:root {
+  --primaryBg: #000000;
+  --btn-primary: linear-gradient(#1ad1b2, #04b7de);
+  --primary-color: #04b7de;
+  --primary-black: #03233e;
+}

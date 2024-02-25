@@ -1,0 +1,35 @@
+.latest-container {
+  width: 100%;
+  margin: 2rem 0;
+
+  h1:first-child {
+    font-weight: 400;
+  }
+}
+
+.latest-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.latestCard {
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+
+  img {
+    border-radius: 8px;
+    max-width: 200px;
+  }
+  p {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  p:nth-child(2) {
+    font-weight: 400;
+  }
+}

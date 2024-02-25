@@ -1,0 +1,61 @@
+@import "../../style/mixins.scss";
+
+.overview-content_cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: space-between;
+
+  .contentCard {
+    width: 200px;
+    cursor: pointer;
+    h1 {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 13px;
+    }
+  }
+}
+
+.loadMoreBtn {
+  width: 200px;
+  margin: 2rem auto;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  button {
+    width: 200px;
+    padding: 10px 2rem;
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+@include md {
+  .overview-content_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .contentCard {
+      width: 100%;
+    }
+  }
+}

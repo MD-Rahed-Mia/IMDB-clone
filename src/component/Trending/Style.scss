@@ -1,0 +1,79 @@
+@import "../../style/mixins.scss";
+
+.trending {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.trendingSelect {
+  display: flex;
+  align-items: center;
+  h1 {
+    font-weight: 500;
+  }
+  .trendingBtn {
+    margin-left: 1rem;
+    border-radius: 50px;
+    button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button.active {
+      background: var(--btn-primary);
+      color: white;
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  gap: 1.5rem;
+  padding: 10px;
+}
+
+.sliderCard {
+  width: 250px;
+  background: white;
+  border-top-left-radius: 10px;
+
+  img {
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.sliderImg {
+  position: relative;
+
+  .contentType {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    background: var(--btn-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@include md {
+}

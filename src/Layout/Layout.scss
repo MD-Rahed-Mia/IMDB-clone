@@ -1,0 +1,13 @@
+@import "../style/mixins.scss";
+
+.layout {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@include md {
+  .layout {
+    width: 100%;
+    margin: 0;
+  }
+}
