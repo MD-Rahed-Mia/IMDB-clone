@@ -10,7 +10,7 @@ export default function SliderCard({ sliderData }) {
       <Link to={`/details/${id}`}>
         <div className="sliderImg">
           <img
-            src={"http://image.tmdb.org/t/p/original" + sliderData.backdrop}
+            src={sliderData?.backdrop && "http://image.tmdb.org/t/p/original" + sliderData.backdrop}
           />
           <div className="contentType">
             <p>{type}</p>

@@ -7,8 +7,8 @@ export default function Banner() {
   const { data, loading } = useFetch("trending/movie/day?language=en-US");
   const navigate = useNavigate();
 
-
   const [bg, setBg] = useState(null);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const baseUrl = "http://image.tmdb.org/t/p/";
@@ -21,12 +21,11 @@ export default function Banner() {
     );
   }, [data, loading]);
 
-  function gotoSearch(event){
-    if(event.target == "Enter"){
-      navigate('/search');
+  function gotoSearch(event) {
+    if (event.key == "Enter" && query.length > 0) {
+      navigate(`/search/${query}`);
     }
   }
-
 
   return (
     <div>
@@ -49,9 +48,16 @@ export default function Banner() {
             name="search"
             id="search"
             placeholder="search your favourite movie or shows....."
-            onKeyUp={gotoSearch}
+            onChange={(event) => setQuery(event.target.value)}
+            onKeyUp={(event) => gotoSearch(event)}
           />
-          <button>search</button>
+          <button
+            onClick={() =>
+              query.length > 0 ? navigate(`/search/${query}`) : ""
+            }
+          >
+            search
+          </button>
         </div>
       </div>
     </div>

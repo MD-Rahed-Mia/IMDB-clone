@@ -9,9 +9,7 @@ export default function OverView() {
     <Layout>
       <div className="overview">
         <h2>Popular movies</h2>
-        <div className="overview-filter">
-
-        </div>
+        <div className="overview-filter"></div>
         <div className="overview-content">
           <OverviewContent />
         </div>

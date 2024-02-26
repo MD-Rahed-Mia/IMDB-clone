@@ -7,7 +7,10 @@ export default function LatestCard({ cardDetails }) {
     <div className="latestCard">
       <Link to={`/details/${id}`}>
         <div>
-          <img src={"http://image.tmdb.org/t/p/original" + img} alt="img" />
+          <img
+            src={img && "http://image.tmdb.org/t/p/original" + img}
+            alt="img"
+          />
           <div>
             <p>{title}</p>
             <p>22-02-2024</p>

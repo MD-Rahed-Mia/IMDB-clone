@@ -11,7 +11,11 @@ export default function ContentCard({ data }) {
       <Link to={`/details/${data.id}`}>
         <div>
           <img
-            src={`https://media.themoviedb.org/t/p/original/${data.poster_path}` || <Skeleton />}
+            src={data?.poster_path &&
+              `https://media.themoviedb.org/t/p/original/${data?.poster_path}` || (
+                <Skeleton />
+              )
+            }
             // onload={handleLoad}
             alt="img"
           />

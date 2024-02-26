@@ -29,7 +29,7 @@ export default function Latest() {
                   cardDetails={{
                     id: item.id,
                     title: item.original_title,
-                    img: item.poster_path,
+                    img: item?.poster_path,
                     date: item.release_date,
                   }}
                 />

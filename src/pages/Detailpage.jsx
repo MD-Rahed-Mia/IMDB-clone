@@ -4,6 +4,7 @@ import useFetch from "../utils/useFetch";
 import { useParams } from "react-router-dom";
 import "./../style/detailspage.scss";
 import Detailstop from "../component/DetailsPage/Detailstop";
+import Recommendation from "../component/Recommendations/Recommendation";
 
 export default function Detailpage() {
   const { id } = useParams();
@@ -25,7 +26,9 @@ export default function Detailpage() {
         }}
       >
         <Detailstop details={data} />
+
       </div>
+        <Recommendation />
     </Layout>
   );
 }
